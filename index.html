@@ -78,19 +78,6 @@
                                     <ul id="navigation">
                                         <li><a class="active" href="index.html">home</a></li>
                                         <li><a href="#services">Services</a></li>
-                                        <li><a href="#">Test<i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="#">blog</a></li>
-                                                <li><a href="#">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="#">elements</a></li>
-                                                <li><a href="#">about</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Doctors</a></li>
                                         <li><a href="#">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -607,7 +594,7 @@
                             <p>Esteem spirit temper too say adieus.</p>
                         </div>
                         <div class="info_button">
-                            <a href="#" class="boxed-btn3-white">Make an Appointment</a>
+                            <a href="#test-form" class="boxed-btn3-white popup-with-form">Make an Appointment</a>
                         </div>
                     </div>
                 </div>
@@ -703,42 +690,26 @@
     <!-- link that opens popup -->
 
     <!-- form itself end-->
-    <form id="test-form" class="white-popup-block mfp-hide">
+    <form id="test-form" method="POST" action="https://formspree.io/xeqenkbb" class="white-popup-block mfp-hide">
         <div class="popup_box ">
             <div class="popup_inner">
                 <h3>Make an Appointment</h3>
                 <form action="#">
                     <div class="row">
                         <div class="col-xl-6">
-                            <input id="datepicker" placeholder="Pick date">
+                            <input id="datepicker" name="date" placeholder="Pick date">
                         </div>
                         <div class="col-xl-6">
-                            <input id="datepicker2" placeholder="Suitable time">
+                            <input id="datepicker2" name="time" placeholder="Suitable time">
                         </div>
                         <div class="col-xl-6">
-                            <select class="form-select wide" id="default-select" class="">
-                                <option data-display="Select Department">Department</option>
-                                <option value="1">Eye Care</option>
-                                <option value="2">Physical Therapy</option>
-                                <option value="3">Dental Care</option>
-                            </select>
+                            <input type="text" name="customerName" placeholder="Name">
                         </div>
                         <div class="col-xl-6">
-                            <select class="form-select wide" id="default-select" class="">
-                                <option data-display="Doctors">Doctors</option>
-                                <option value="1">Mirazul Alom</option>
-                                <option value="2">Monzul Alom</option>
-                                <option value="3">Azizul Isalm</option>
-                            </select>
-                        </div>
-                        <div class="col-xl-6">
-                            <input type="text" placeholder="Name">
-                        </div>
-                        <div class="col-xl-6">
-                            <input type="text" placeholder="Phone no.">
+                            <input type="text" name="customerPhone" placeholder="Phone no.">
                         </div>
                         <div class="col-xl-12">
-                            <input type="email" placeholder="Email">
+                            <input type="email" name="customerEmail" placeholder="Email">
                         </div>
                         <div class="col-xl-12">
                             <button type="submit" class="boxed-btn3">Confirm</button>
