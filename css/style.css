@@ -6281,7 +6281,8 @@ h6 {
 /* floating action button */
 
 .float{
-	position:fixed;
+  position: fixed;
+  z-index: 2;
 	width:60px;
 	height:60px;
 	bottom:40px;
@@ -6290,7 +6291,6 @@ h6 {
 	color:#FFF;
 	border-radius:5px;
 	text-align:center;
-	
 }
 
 .my-float{
