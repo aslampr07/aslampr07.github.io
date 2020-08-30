@@ -6262,3 +6262,37 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*google-maps embed for responsive*/ 
+.google-maps {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* floating action button */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25D366;
+	color:#FFF;
+	border-radius:5px;
+	text-align:center;
+	
+}
+
+.my-float{
+	margin-top:5px;
+}
