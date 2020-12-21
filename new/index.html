@@ -26,8 +26,12 @@
         }
 
         .header-contact {
-            background-color: #5db2ff30;
+            background-color: #899fb430;
             padding: 16px;
+        }
+
+        .header-icons {
+            color: #5db2ff;
         }
 
         .header-menu-section {
@@ -67,8 +71,6 @@
             margin-top: 8px;
             margin-bottom: 32px;
         }
-
-
 
         .about-content {
             color: #707070;
@@ -118,6 +120,19 @@
 
         .services>.underline {
             margin-left: 8px;
+        }
+
+        .service-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 32px;
+            padding: 8px;
+        }
+
+        .service-items>* {
+            margin-bottom: 16px;
+            color: rgba(0, 0, 0, 0.7);
         }
 
         .contact {
@@ -203,6 +218,45 @@
             font-size: 0.8rem;
             margin-bottom: 16px;
         }
+
+        #drawer {
+            background-color: white;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0px;
+            left: -100vw;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            padding: 16px 0px 0px 0px;
+        }
+
+        .drawer-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #drawer>a {
+            width: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            margin-left: 16px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #whatsappbutton {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background-color: #128C7E;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+        }
     </style>
 
     <script src="https://kit.fontawesome.com/2c2ee841f1.js" crossorigin="anonymous"></script>
@@ -211,18 +265,15 @@
 <body>
     <header>
         <div class="header-contact">
-            <table>
-
-            </table>
-            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-phone-alt header-icons"></i>
             +91 9207 02 5777, +91 9847 02 5777
             <br>
-            <i class="far fa-envelope"></i>
+            <i class="far fa-envelope header-icons"></i>
             contact@metroclean.in
         </div>
         <div class="header-menu-section">
             <img class="logo" src="img/logo.png" />
-            <img class="menu-icon" src="img/menu.png" />
+            <img class="menu-icon" src="img/menu.png" onclick="openNav()" />
         </div>
     </header>
     <div id="banner">
@@ -234,14 +285,14 @@
             and skilled
         </div>
     </div>
-    <div class="about">
+    <div id="about" class="about">
         <h1 class="about-header">About Us</h1>
         <div class="underline"></div>
         <div class="about-content">Not only do we bring all of the essentials but we bring a professional-grade vacuum
             to ensure your floors
             are fresh and clean.</div>
     </div>
-    <div class="expertise">
+    <div id="expertise" class="expertise">
         <h1 class="expertise-header">Our Speciality</h1>
         <div class="underline"></div>
         <div class="expertise-item">
@@ -262,14 +313,44 @@
         </div>
     </div>
 
-    <div class="services">
+    <div id="services" class="services">
         <h1 class="services-header">Our Services</h1>
         <div class="underline"></div>
+
+        <div class="service-items">
+            <img src="img/office.png" />
+            <h2>Office Cleaning</h2>
+            <div>
+                Today, it is all about the impression! If a business premise or environment is not hygienic or
+                adequately cleaned up, it will leave a bad impression to whoever enters your office premises. Also, it
+                is about maintaining a safe and healthy working environment for the employees as well as business
+                clients.
+            </div>
+        </div>
+        <div class="service-items">
+            <img src="img/hospital.png" />
+            <h2>Hospital Cleaning</h2>
+            <div>
+                Metro clean designed specifically for healthcare environments, all focused on creating safe
+                environments for both patients and staff. From public visiting areas to patient rooms and operating
+                theaters, Our cleaning and disinfecting procedures match the most stringent international standards.
+            </div>
+        </div>
+        <div class="service-items">
+            <img src="img/move.png" />
+            <h2>Move in or out cleaning</h2>
+            <div>
+                MetroClean boasts of catering to alike commercial and residential move in or out cleaning. With our
+                expertise and proven techniques, we ensure saving of time and effort. Our industry standard cleaning
+                process provides you with guaranteed excellence at the end.
+            </div>
+        </div>
+
     </div>
 
-    <div class="contact">
+    <div id="getintouch" class="contact">
         <h1 class="contact-header">Get in Touch</h1>
-
+        <div class="underline"></div>
         <input type="text" class="contact-inputs" placeholder="Name" />
         <input type="text" class="contact-inputs" placeholder="Phone" />
         <input type="text" class="contact-inputs" placeholder="Email" />
@@ -277,7 +358,7 @@
         <input class="contact-submit" type="button" value="Submit" />
     </div>
 
-    <footer>
+    <footer id="contact-us">
         <img src="img/logo.png" class="footer-logo" />
         <table class="footer-table">
             <tr>
@@ -316,6 +397,40 @@
             © Copyright 2021 Metro Clean - All Rights Reserved
         </div>
     </footer>
+    <div id="drawer">
+        <div class="drawer-navbar">
+            <img class="logo" src="img/logo.png" />
+            <img class="menu-icon" src="img/close.png" onclick="closeNav()" />
+        </div>
+        <a href="#about">About Us</a>
+        <a href="#expertise">Our Speciality</a>
+        <a href="#services">Our Services</a>
+        <a href="#getintouch">Get in Touch</a>
+        <a href="#contact-us">Contact Us</a>
+    </div>
+
+    <a id="whatsappbutton" href="https://wa.me/+919207025777">
+        <i class="fa fa-whatsapp my-float fa-3x"></i>
+    </a>
+
+    <script>
+        function openNav() {
+            document.getElementById("drawer").style.left = "0vw"
+        }
+        function closeNav() {
+            document.getElementById("drawer").style.left = "-100vw"
+        }
+
+        const links = document.querySelectorAll("#drawer>a");
+
+
+        for (let i = 0; i < links.length; i++) {
+            links[i].onclick = () => {
+                document.getElementById("drawer").style.left = "-100vw"
+            }
+        }
+
+    </script>
 </body>
 
 </html>
