@@ -24,20 +24,34 @@
         </div>
     </header>
     <div id="banner">
-        <div class="banner-header">
-            Metro Clean
+        <div class="banner-arrows">
+            <img class="banner-arrow" onclick="previousImage()" src="img/left.png" />
+            <img class="banner-arrow" onclick="nextImage()" src="img/right.png" />
         </div>
-        <div class="banner-subtext">
-            A full service cleaning and maintenance company, was established in 2001 and all our employees are bonded
-            and skilled
+
+        <div class="banner-container">
+            <div class="banner-container-item" style="background-image: url('/img/mop.jpg');">
+                MetroClean
+            </div>
+
+            <div class="banner-container-item" style="background-image: url('/img/office.jpg');">
+                Office Cleaning
+            </div>
+
+            <div class="banner-container-item" style="background-image: url('/img/hospital.jpg')">
+                Hostpital Cleaning
+            </div>
+            <div class="banner-container-item" style="background-image: url('/img/construction.jpg')">
+                Post Contruction Cleaning
+            </div>
         </div>
+
     </div>
     <div id="about" class="about">
         <h1 class="about-header">About Us</h1>
         <div class="underline"></div>
-        <div class="about-content">Not only do we bring all of the essentials but we bring a professional-grade vacuum
-            to ensure your floors
-            are fresh and clean.</div>
+        <div class="about-content">MetroClean a full cleaning and maintenance service company, The company has high
+            standard for quality of service and all our employees are bonded.</div>
     </div>
     <div id="expertise" class="expertise">
         <h1 class="expertise-header">Our Speciality</h1>
@@ -170,12 +184,47 @@
 
         const links = document.querySelectorAll("#drawer>a");
 
-
         for (let i = 0; i < links.length; i++) {
             links[i].onclick = () => {
                 document.getElementById("drawer").style.left = "-100vw"
             }
         }
+
+        const bannerContainer = document.querySelector(".banner-container");
+
+        let currentSelected = 0;
+        let childCount = bannerContainer.children.length;
+
+        for (let index = 0; index < bannerContainer.children.length; index++) {
+            bannerContainer.children[index].style.zIndex = `${-index}`;
+        }
+
+
+        function nextImage() {
+
+            currentSelected = (currentSelected + 1) % childCount;
+
+            for (let index = 0; index < bannerContainer.children.length; index++) {
+                if (index === currentSelected)
+                    bannerContainer.children[index].style.zIndex = `0`
+                else bannerContainer.children[index].style.zIndex = `-1`
+            }
+        }
+
+        function previousImage() {
+            if (currentSelected === 0) {
+                currentSelected = childCount - 1;
+            }
+            else currentSelected--;
+
+            for (let index = 0; index < bannerContainer.children.length; index++) {
+                if (index === currentSelected)
+                    bannerContainer.children[index].style.zIndex = `0`
+                else bannerContainer.children[index].style.zIndex = `-1`
+            }
+        }
+
+        setInterval(() => nextImage(), 5000)
 
     </script>
 </body>
