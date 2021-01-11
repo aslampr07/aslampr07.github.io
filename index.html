@@ -7,6 +7,11 @@
     <title>MetroClean | Home</title>
     <link href="css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c2ee841f1.js" crossorigin="anonymous"></script>
+    <style>
+        .banner-item1>div {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,8 +35,8 @@
         </div>
 
         <div class="banner-container">
-            <div class="banner-container-item" style="background-image: url('/img/mop.jpg');">
-                MetroClean
+            <div class="banner-container-item banner-item1" style="background-image: url('/img/mop.jpg');">
+                <div>Clean the way!</div>
             </div>
 
             <div class="banner-container-item" style="background-image: url('/img/office.jpg');">
@@ -47,63 +52,57 @@
         </div>
 
     </div>
-    <div id="about" class="about">
-        <h1 class="about-header">About Us</h1>
-        <div class="underline"></div>
-        <div class="about-content">MetroClean a full cleaning and maintenance service company, The company has high
-            standard for quality of service and all our employees are bonded.</div>
+
+    <div class="about-container">
+        <img class="about-image" src="/img/cleaning-chemical.jpg" />
+        <div id="about" class="about">
+            <h1 class="about-header">About Us</h1>
+            <div class="underline"></div>
+            <div class="about-content">MetroClean a full cleaning and maintenance service company, The company has high
+                standard for quality of service and all our employees are bonded.</div>
+        </div>
     </div>
+
+
     <div id="expertise" class="expertise">
         <h1 class="expertise-header">Our Speciality</h1>
         <div class="underline"></div>
-        <div class="expertise-item">
-            <img src="img/vacuum.png" class="expertise-icons" />
-            <h1 class="expertise-header">We Bring it All</h1>
-            <div>Not only do we bring all of the essentials but we bring a professional-grade vacuum to ensure your
-                floors are fresh and clean.</div>
-        </div>
-        <div class="expertise-item">
-            <img src="img/worker.png" class="expertise-icons" />
-            <h1 class="expertise-header">Experienced Staff</h1>
-            <div>Professional and experienced background checked staff ready to help you anytime.</div>
-        </div>
-        <div class="expertise-item">
-            <img src="img/clock.png" class="expertise-icons" />
-            <h1 class="expertise-header">Same Day Service</h1>
-            <div>Set your schedule and get the regular and faster cleaning everyday. Same day service available.</div>
+        <div class="expertise-container">
+            <div class="expertise-item">
+                <img src="img/vacuum.png" class="expertise-icons" />
+                <h1 class="expertise-header">We Bring it All</h1>
+                <div>Not only do we bring all of the essentials but we bring a professional-grade vacuum to ensure your
+                    floors are fresh and clean.</div>
+            </div>
+            <div class="expertise-item">
+                <img src="img/worker.png" class="expertise-icons" />
+                <h1 class="expertise-header">Experienced Staff</h1>
+                <div>Professional and experienced background checked staff ready to help you anytime.</div>
+            </div>
+            <div class="expertise-item">
+                <img src="img/clock.png" class="expertise-icons" />
+                <h1 class="expertise-header">Same Day Service</h1>
+                <div>Set your schedule and get the regular and faster cleaning everyday. Same day service available.
+                </div>
+            </div>
         </div>
     </div>
 
     <div id="services" class="services">
         <h1 class="services-header">Our Services</h1>
         <div class="underline"></div>
-
         <div class="service-items">
-            <img src="img/office.png" />
-            <h2>Office Cleaning</h2>
-            <div>
-                Today, it is all about the impression! If a business premise or environment is not hygienic or
-                adequately cleaned up, it will leave a bad impression to whoever enters your office premises. Also, it
-                is about maintaining a safe and healthy working environment for the employees as well as business
-                clients.
+            <img src="img/cleaning.png" />
+            <h1>Cleaning Services</h1>
+            <div class="service-description">
+                Home, Office or anything, we can make it squeaky clean.
             </div>
         </div>
         <div class="service-items">
-            <img src="img/hospital.png" />
-            <h2>Hospital Cleaning</h2>
-            <div>
-                Metro clean designed specifically for healthcare environments, all focused on creating safe
-                environments for both patients and staff. From public visiting areas to patient rooms and operating
-                theaters, Our cleaning and disinfecting procedures match the most stringent international standards.
-            </div>
-        </div>
-        <div class="service-items">
-            <img src="img/move.png" />
-            <h2>Move in or out cleaning</h2>
-            <div>
-                MetroClean boasts of catering to alike commercial and residential move in or out cleaning. With our
-                expertise and proven techniques, we ensure saving of time and effort. Our industry standard cleaning
-                process provides you with guaranteed excellence at the end.
+            <img src="img/maintenance.png" />
+            <h1>Maintanance Services</h1>
+            <div class="service-description">
+                Leaking pipe? Electrical Problem? Just give us a call.
             </div>
         </div>
 
@@ -224,7 +223,7 @@
             }
         }
 
-        setInterval(() => nextImage(), 5000)
+        //setInterval(() => nextImage(), 5000)
 
     </script>
 </body>

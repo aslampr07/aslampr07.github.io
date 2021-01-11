@@ -6,10 +6,9 @@
 
 #banner {
     width: 100%;
-    height: 300px;
+    height: 60vh;
     background-color: gray;
     position: relative;
-
 }
 
 .banner-arrows{
@@ -40,6 +39,7 @@
     background-size: cover;
     background-color: rgba(0, 0, 0, .4);
     background-blend-mode: darken;
+    background-position: center;
 }
 
 .header-contact {
@@ -108,6 +108,7 @@
     justify-content: center;
     height: 70vw;
     margin-bottom: 10px;
+    flex-grow: 1;
 
 }
 
@@ -138,13 +139,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 32px;
-    padding: 8px;
+    margin:30px;
+    padding: 48px 35px 45px 35px;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.2);
+    border-radius: 5px;
 }
 
 .service-items>* {
-    margin-bottom: 16px;
     color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.service-description{
+    font-size: 1.2rem;
+    color: #707070;
 }
 
 .contact {
@@ -270,3 +279,32 @@ footer {
     padding: 8px;
     border-radius: 8px;
 }
+.about-container{
+    display: flex;
+    align-items: center;
+}
+.about-image {
+    display: none;
+    margin: 100px;
+    width: 50%;
+}
+
+
+@media (min-width: 1281px) {
+  
+    .about-image{
+        display: block;
+    }
+
+    .expertise-container {
+        display: flex;
+    }
+
+    .expertise-item{
+        height: auto;
+        margin: 5px;
+        flex-grow: 1;
+        width: 5px;
+    }
+    
+  }
