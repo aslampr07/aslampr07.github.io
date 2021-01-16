@@ -41,11 +41,21 @@ a{
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .6);
     background-blend-mode: darken;
     background-position: center;
 }
-
+.banner-item-common {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    padding-right: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
 .header-contact {
     background-color: #899fb430;
     padding: 16px;

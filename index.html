@@ -8,9 +8,28 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c2ee841f1.js" crossorigin="anonymous"></script>
     <style>
-        .banner-item1>div {
+        .banner-item1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        .banner1-header {
+            font-size: 3rem;
             color: white;
         }
+
+        .banner1-subtext {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .banner-item-common {}
     </style>
 </head>
 
@@ -18,7 +37,7 @@
     <header>
         <div class="header-contact">
             <i class="fas fa-phone-alt header-icons"></i>
-            +91 9207 02 5777
+            +91 9207 02 5777, 0484 4870877
             <br>
             <i class="far fa-envelope header-icons"></i>
             contact@metroclean.in
@@ -36,18 +55,46 @@
 
         <div class="banner-container">
             <div class="banner-container-item banner-item1" style="background-image: url('/img/mop.jpg');">
-                <div>Clean the way!</div>
+                <div class="banner1-header">Metro<span style="color: #00b0f0;">Clean</span></div>
+                <div class="banner1-subtext">Housekeeping and Maintanance Service</div>
             </div>
 
-            <div class="banner-container-item" style="background-image: url('/img/office.jpg');">
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/office.jpg');">
                 Office Cleaning
             </div>
 
-            <div class="banner-container-item" style="background-image: url('/img/hospital.jpg')">
-                Hostpital Cleaning
+            <div class="banner-container-item banner-item-common"
+                style="background-image: url('/img/house-interior.jpg')">
+                House/Flat Cleaning
             </div>
-            <div class="banner-container-item" style="background-image: url('/img/construction.jpg')">
+            <div class="banner-container-item banner-item-common"
+                style="background-image: url('/img/construction.jpg')">
                 Post Contruction Cleaning
+            </div>
+
+            <div class="banner-container-item banner-item-common"
+                style="background-image: url('/img/steamcleaning.jpg')">
+                Steam Cleaning
+            </div>
+
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/carpet.jpg')">
+                Carpet/Sofa Cleaning
+            </div>
+
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/electrical.jpg')">
+                Electrical Maintanance
+            </div>
+
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/plumbing.jpg')">
+                Plumbing
+            </div>
+
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/ac.jpg')">
+                AC Installation and Maintanance
+            </div>
+
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/cctv.jpg')">
+                CCTV Installation and Maintanance
             </div>
         </div>
 
@@ -121,6 +168,7 @@
                 </td>
                 <td>
                     <div>+91 9207 02 5777</div>
+                    <div>+91 4844 87 0877</div>
                 </td>
             </tr>
             <tr>
@@ -217,7 +265,7 @@
             }
         }
 
-        //setInterval(() => nextImage(), 5000)
+        setInterval(() => nextImage(), 3000)
 
     </script>
 </body>
