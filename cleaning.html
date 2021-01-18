@@ -8,8 +8,25 @@
     <link href="css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c2ee841f1.js" crossorigin="anonymous"></script>
     <style>
-        .banner-item1>div {
+        .banner-item1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        .banner1-header {
+            font-size: 3rem;
             color: white;
+        }
+
+        .banner1-subtext {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
         }
     </style>
 </head>
@@ -36,60 +53,107 @@
 
         <div class="banner-container">
             <div class="banner-container-item banner-item1" style="background-image: url('/img/mop.jpg');">
-                <div>Clean the way!</div>
+                <div class="banner1-header">Metro<span style="color: #00b0f0;">Clean</span></div>
+                <div class="banner1-subtext">Housekeeping and Maintanance Service</div>
             </div>
 
-            <div class="banner-container-item" style="background-image: url('/img/office.jpg');">
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/office.jpg');">
                 Office Cleaning
             </div>
 
-            <div class="banner-container-item" style="background-image: url('/img/hospital.jpg')">
-                Hostpital Cleaning
+            <div class="banner-container-item banner-item-common"
+                style="background-image: url('/img/house-interior.jpg')">
+                House/Flat Cleaning
             </div>
-            <div class="banner-container-item" style="background-image: url('/img/construction.jpg')">
+            <div class="banner-container-item banner-item-common"
+                style="background-image: url('/img/construction.jpg')">
                 Post Contruction Cleaning
             </div>
+
+            <div class="banner-container-item banner-item-common"
+                style="background-image: url('/img/steamcleaning.jpg')">
+                Steam Cleaning
+            </div>
+
+            <div class="banner-container-item banner-item-common" style="background-image: url('/img/carpet.jpg')">
+                Carpet/Sofa Cleaning
+            </div>
+
         </div>
 
     </div>
 
-    <h1>Cleaning Services</h1>
-    <div class="underline"></div>
+    <div class="common-header">
+        <div>
+            <h1 class="about-header">Cleaning Services</h1>
+            <div class="underline"></div>
+        </div>
+
+    </div>
+
 
     <div class="internal-service-container">
         <div class="internal-service-item">
             <img class="internal-service-image" src="img/housecleaning.jpg" />
             <div class="internal-service-texts">
-                <div class="internal-service-header">House Cleaning</div>
+                <div class="internal-service-header">House/Flat Cleaning</div>
                 <div class="internal-service-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    Whenever you need residential cleaning, our professional cleaners can offer a helping hand. We know
+                    people are often busy with work and children to look after, so why not take a break and leave the
+                    mundane chores to us? Be it mopping, dusting, scrubbing or vacuuming, our professional cleaners are
+                    the right people for every housekeeping task. Whether you need a one-off spring clean or a regular
+                    service, our specialists are happy to help</div>
             </div>
         </div>
 
         <div class="internal-service-item">
-            <img class="internal-service-image" src="img/housecleaning.jpg" />
+            <img class="internal-service-image" src="img/office-view.jpg" />
             <div class="internal-service-texts">
                 <div class="internal-service-header">Office Cleaning</div>
                 <div class="internal-service-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    Today, it is all about the impression! If a business premise or environment is not hygienic or
+                    adequately cleaned up, it will leave a bad impression to whoever enters your office premises. Also,
+                    it is about maintaining a safe and healthy working environment for the employees as well as business
+                    clients. With our expertise and proven techniques, we ensure saving of time and effort. Our industry
+                    standard cleaning process provides you with guaranteed excellence at the end. </div>
             </div>
         </div>
 
         <div class="internal-service-item">
-            <img class="internal-service-image" src="img/housecleaning.jpg" />
+            <img class="internal-service-image" src="img/construction-view.jpg" />
             <div class="internal-service-texts">
                 <div class="internal-service-header">Post Construction Cleaning</div>
                 <div class="internal-service-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    Even before the dust settles we are there to help with any Construction Cleaning needs. Dust removal
+                    before painting, garbage removal, pressure washing or anything else you may need Metro Clean is
+                    there to get the job done. You can trust us to bring out the brilliance and shine in your new
+                    building project. Let us transform your construction site into the clean and beautiful master piece
+                    you created. </div>
+            </div>
+        </div>
+
+
+        <div class="internal-service-item">
+            <img class="internal-service-image" src="img/steamcleaning-view.jpg" />
+            <div class="internal-service-texts">
+                <div class="internal-service-header">Steam Cleaning</div>
+                <div class="internal-service-description">
+                    Send the germs and bacteria’s in your home straight out of the door by booking our steam cleaning
+                    services. We provide experienced steam cleaning teams who can provide tailored, bespoke solutions to
+                    meet each project's requirements, enabling us to provide the most effective and efficient service
+                    possible. </div>
+            </div>
+        </div>
+
+        <div class="internal-service-item">
+            <img class="internal-service-image" src="img/carpet-view.jpg" />
+            <div class="internal-service-texts">
+                <div class="internal-service-header">Sofa/Carpet Shampoo Washing</div>
+                <div class="internal-service-description">
+                    Have you ever thought your relaxed and cozy zone contains too much pollution, dust mites, dust
+                    particles, bacteria and many other elements that pollutes? Cleaning experts recommend cleaning sofa
+                    and carpets once in six months to make it pollution free and extend its life too. Different parts of
+                    sofa need different cleaning techniques depending on their fabric and level of soiling. </div>
             </div>
         </div>
     </div>
