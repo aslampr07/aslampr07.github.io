@@ -104,6 +104,7 @@ a{
 
 .about-content {
     color: #707070;
+    text-align: justify;
 }
 
 .expertise {
@@ -336,6 +337,7 @@ footer {
 .internal-service-description{
     color: #707070;
     margin-top: 16px;
+    text-align: justify;
 }
 
 .common-header{
@@ -364,6 +366,11 @@ footer {
     color: white;
     font-size: 1.2rem;
     text-align: center;
+}
+
+.header-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
 }
 
 @media (min-width: 1281px) {
