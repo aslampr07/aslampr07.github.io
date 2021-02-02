@@ -227,6 +227,7 @@ a{
     padding: 10px;
     font-size: 1rem;
     margin-bottom: 16px;
+    max-width: 458px;
     color: white;
     background-color: #000000AF;
     border: 0px;
@@ -432,6 +433,40 @@ footer {
 .header-title{
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
+}
+
+.footer-contact{
+    width: 100%;
+    display: flex;
+}
+
+.footer-contact > div{
+    flex-grow: 1;
+}
+
+.footer-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form{
+    visibility: collapse;
+}
+
+
+@media(min-width: 700px){
+
+    .contact{
+        display: none;
+    }
+
+    .contact-submit{
+        align-self: flex-start;
+    }
+
+    .footer-form{
+        visibility: visible;
+    }
 }
 
 @media (min-width: 1281px) {
