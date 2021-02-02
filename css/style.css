@@ -17,7 +17,7 @@ a{
 
 #banner {
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     background-color: gray;
     position: relative;
 }
@@ -128,6 +128,10 @@ a{
     margin-left: 8px;
 }
 
+.expertise-description{
+    text-align: justify;
+}
+
 .expertise-item {
     background-color: #5db2ff;
     color: white;
@@ -136,8 +140,15 @@ a{
     justify-content: center;
     margin-bottom: 10px;
     flex-grow: 1;
+    max-width: 440px;
     padding-bottom: 8px;
-    padding-top: 8px;
+    padding-top: 16px;
+}
+
+.expertise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .expertise-item>* {
@@ -168,6 +179,7 @@ a{
     flex-direction: column;
     align-items: center;
     margin:30px;
+    max-width: 420px;
     padding: 48px 35px 45px 35px;
     box-shadow: 0 0 4px 2px rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -183,6 +195,20 @@ a{
     font-size: 1.2rem;
     color: #707070;
 }
+
+.service-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .service-item-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }   
+  }
 
 .contact {
     padding: 10px;
@@ -416,6 +442,8 @@ footer {
 
     .expertise-container {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .expertise-item{
